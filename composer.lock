@@ -897,6 +897,7 @@
                 ],
                 "themes": [
                     "skeleton",
+                    "test",
                     "base-2018",
                     "base-2021"
                 ]
