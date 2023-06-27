@@ -589,7 +589,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   }
 
   footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: var(--primary);
     height: 100px;
