@@ -17,12 +17,11 @@
         </title>
         <link rel="stylesheet" href="{{ asset('css/simple.css') }}">
     </head>
-    <body>
+    <body class="container">
     {{ include('partials/_header.twig') }}
 
     <main>
     {% block body %}
-
 
             {{ widgets('main_top') }}
 
@@ -33,11 +32,25 @@
 
         {% endblock body %}
     </main>
-
+    
     {% block aside %}
     {% endblock aside %}
 
     {{ include('partials/_footer.twig') }}
+    {{ include('partials/_video_overlay.twig') }}
 
+        <!-- must be above all other scipts -->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <!-- must be above all other scipts end -->
+    
+       
+        <script src="theme/skeleton/js/Tippy.js"></script>
+
+        <script src="theme/skeleton/js/disablescroll.js"></script>
+        <script src="theme/skeleton/js/video-overlay.js  "></script>
+        <script src="https://kit.fontawesome.com/f00e0f6e3c.js" crossorigin="anonymous"></script>
+        <script src="theme/skeleton/js/script.js"></script>
     </body>
+
 </html>

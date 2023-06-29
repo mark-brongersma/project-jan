@@ -1,0 +1,12 @@
+{% if image_background %}
+<!-- background image -->
+    <figure>
+        <a href="{{ record|image }}">
+            <img class="background-image" src="{{ thumbnail(record, 1368, 1026) }}" alt="{{ (record|image).alt|default(record|title) }}">
+        </a>
+        {% if image.alt|default() %}
+            <figcaption>{{ image.alt }}</figcaption>
+        {% endif %}
+    </figure>
+<!-- background image -->
+{% endif %}

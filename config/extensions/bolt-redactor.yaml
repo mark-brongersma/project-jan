@@ -6,8 +6,7 @@
 # below will be merged or appended with those values.
 
 default:
-    # All options for buttons: html, format, bold, italic, deleted, lists, link, file, line, redo,
-    # undo, underline, ol, ul, indent, outdent, sup, sub
+
     buttons: [ format, bold, italic, lists, link, html, image, file ]
 
     # See https://imperavi.com/redactor/plugins/ for available plugins

@@ -3,18 +3,17 @@
 {% block main %}
 
     {% if record|default %}
-        {# Remove this block if you don't need it anymore. #}
-        {{ include('partials/_fresh_install.twig') }}
 
         {# Output the `introduction` field. If it doesn't exist, 'default' to
            the full excerpt of the current Record #}
-        {{ record.introduction|default(record|excerpt) }}
-
+        
         {% include 'partials/_image.twig' with ({'image': record|image}) %}
 
-        {{ record.content }}
+        <blockquote class="quote-menu">{{ record.quote }}</blockquote>
 
-        {{ include('partials/_recordfooter.twig', { 'record': record }) }}
+        {% include 'partials/_image_background.twig' with ({'image_background': record|image}) %}
+
+        
 
     {% endif %}
 

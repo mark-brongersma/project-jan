@@ -14,19 +14,25 @@ homepage:
             group: content
             localize: true
             label: Title
-            postfix: |
-                The 'Homepage' can contain basic information about the website. This title will be
-                shown on the homepage of the website, as the name implies. To change the
-                <em><strong>name</strong></em> of the site, as is shown in the header, and the tab
-                in the webbrowser, edit <code>sitename:</code> in the configuration file.
+                
+        background image:
+            type: image
+
         image:
             type: image
+
+        quote:
+            type: text
+            localize: true
+
         introduction:
             type: redactor
             localize: true
+
         content:
             type: redactor
             localize: true
+            
         contentlink:
             type: text
             label: Link
