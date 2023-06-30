@@ -15,16 +15,23 @@ homepage:
             localize: true
             label: Title
                 
-        background image:
+        background_image:
             type: image
+            lable: Background image
 
-        image:
+        image_ayn:
             type: image
+            lable: Image Ayn
+        
+        buttons:
+            type: image
+            lable: Buttons
 
         quote:
             type: text
             localize: true
 
+    
         introduction:
             type: redactor
             localize: true

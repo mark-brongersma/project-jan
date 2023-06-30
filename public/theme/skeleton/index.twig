@@ -7,11 +7,11 @@
         {# Output the `introduction` field. If it doesn't exist, 'default' to
            the full excerpt of the current Record #}
         
-        {% include 'partials/_image.twig' with ({'image': record|image}) %}
+        <figure class="home-image">{% include 'partials/_image.twig' with ({'image': record.image_ayn}) %}</figure>
 
         <blockquote class="quote-menu">{{ record.quote }}</blockquote>
 
-        {% include 'partials/_image_background.twig' with ({'image_background': record|image}) %}
+        {% include 'partials/_image_background.twig' with ({'background_image': record.background_image}) %}
 
         
 
