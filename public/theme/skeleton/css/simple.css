@@ -116,7 +116,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     width: 100vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
     gap: 1rem;
   }
 
@@ -347,6 +347,8 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     background-color: var(--blue-tranparent);
     backdrop-filter: blur(10px);
     visibility: hidden;
+    left: 0;
+    top: 0;
   }
   
   .overlay-content {
@@ -356,21 +358,17 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   }
 
   .video-wrapper {
-    width: 100vw;
-    height: 100vh;
+    width: fit-content;
+    height: fit-content;
     position: sticky;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: -webkit-sticky;
+    top: 25vh;
   }
 
   .video-wrapper iframe {
     height: 50vw;
     width: 90vw;
     z-index: 2000;
-    position: sticky;
   }
 
   @media only screen and (min-width: 800px) {
@@ -464,7 +462,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   /* css for disablescroll.js */
   .remove-scrolling { 
     height: 100%; 
-    overflow: hidden; 
+    overflow: hidden;
   } 
 
   .close-overlay {
@@ -493,10 +491,15 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   }
   
   .home-image > img {
-    width: auto;
-    max-height: 150px;
+    height: auto;
+    max-width: 250px;
     object-fit: scale-down;
-  }
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 
   blockquote {
     font-family: var(--italicBoldBertold);
@@ -543,10 +546,11 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     align-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+
+    cursor: pointer;
   }
 
-  .figure-box-start > figure,
-  .figure-box-end > figure {
+  .figure-box-start > figure {
     margin: 0;
     position: relative;
     width: 100%;
@@ -555,8 +559,6 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
 
   .overlay-model {
     position: absolute;
-    padding-top: 40%;
-    bottom: 0;
     color: var(--white);
     width: 100%;
     text-align: center;
@@ -564,34 +566,34 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
     font-size: var(--small);
     font-family: var(--bodyFont);
+
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
   }
 
-  .figure-box-start > figure:hover .overlay-model,
-  .figure-box-end > figure:hover .overlay-model  {
+  .figure-box-start > figure:hover .overlay-model {
     background-image: linear-gradient(to bottom, transparent, var(--primary) );
     height: 100%;
   }
 
-  .figure-box-start > figure:hover img,
-  .figure-box-end > figure:hover img {
+  .figure-box-start > figure:hover img {
     transform: scale(1.25);
   }
 
-  .figure-box-start > figure > a > img,
-  .figure-box-end > figure > a > img {
+  .figure-box-start > figure > a > img {
     max-height: 150px;
     width: auto;
     object-fit: scale-down;
     transition: transform 1s ease-in-out
   }
 
-  .figure-box-start,
-  .figure-box-end {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    gap: 1rem;
+  .figure-box-start {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
   }
 
   footer {
@@ -697,13 +699,11 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
       height: auto;
     }
 
-    .figure-box-start,
-    .figure-box-end {
-      flex-direction: row;
+    .figure-box-start {
+      grid-template-columns: auto auto;
     }
 
-    .figure-box-start > figure > a > img,
-    .figure-box-end > figure > a > img {
+    .figure-box-start > figure > a > img {
       max-height: 350px;
       max-width: 350px;
       object-fit: scale-down;

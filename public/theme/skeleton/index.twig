@@ -1,20 +1,41 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-
     {% if record|default %}
+    <!-- top page -->
+        <div class="full-screen">
 
-        {# Output the `introduction` field. If it doesn't exist, 'default' to
-           the full excerpt of the current Record #}
+            <h1>{{record.title}}</h1>
+            <h2>{{record.sub}}</h2>
         
-        <figure class="home-image">{% include 'partials/_image.twig' with ({'image': record.image_ayn}) %}</figure>
+            <div class="button-img-box">
+                <div class="button-box">
+                    {% include 'partials/_button.twig' with {'button': record.button} %}
+                </div>
 
-        <blockquote class="quote-menu">{{ record.quote }}</blockquote>
+                <figure class="home-image">
+                    {% include 'partials/_image.twig' with ({'image': record.image_ayn}) %}
+                </figure>
+            </div>
+            
+            <blockquote class="quote-menu">{{ record.quote }}</blockquote>
+            <figure><a href="#home-tekst"><img src="files/homepage/2023/06/arrow-down.svg " alt="Scroll arrow down"/></a></figure>
+        </div>
+<!-- end top page -->
+        <span id="home-tekst"></span>
+        <div class="page-tekst">
+            {{record.conent1}}
+
+            <div class="figure-box">
+                <div class="figure-box-start">
+                    {% include 'partials/_image_link.twig' with ({'image_en_text': record.image_en_text}) %}
+                </div>
+            </div>
+
+            {{record.conent2}}
+        </div>
 
         {% include 'partials/_image_background.twig' with ({'background_image': record.background_image}) %}
-
-        
-
     {% endif %}
 
 {% endblock main %}

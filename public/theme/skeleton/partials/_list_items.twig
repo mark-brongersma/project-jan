@@ -1,0 +1,32 @@
+{% for feature in record.list_items %}
+
+        <li data-template="tippy_text" id="tooltip">
+                <div data-target="list-video" onclick="openNav(this), disableScroll()"></div>
+                        <a>{{ feature.list_text }}</a>
+                {# https://docs.boltcms.io/5.0/fields/collection #}
+        </li>
+
+                <!-- #tippy {{ feature.list_text }} --> 
+                <div class="tippy-content" style="display: none;">
+                        <div style="display: none;">
+                                <div id="tippy_text">
+                                        <a>{{ feature.tooltip }}</a>
+                                        <a data-target="list-video" onclick="openNav(this), disableScroll()">watch video</a>
+                                </div>
+                        </div>
+                </div>
+                <!-- #tippy {{ feature.list_text }} end --> 
+
+                <!-- #video {{ feature.list_text }} -->
+                <div id="list-video" class="overlay">
+                        <div onclick="closeNav(this), enableScroll()" class="overlay-content">
+                                <div class="video-wrapper">
+                                        <iframe width="1280" height="720px" allow="autoplay" src="{{ feature.link }}">
+                                        </iframe>
+                                </div>
+                        </div>
+                </div>
+                <!-- /#video {{ feature.list_text }} end -->
+
+
+{% endfor %}

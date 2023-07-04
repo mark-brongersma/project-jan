@@ -21,7 +21,7 @@
     {{ include('partials/_header.twig') }}
 
     <main>
-    {% block body %}
+        {% block body %}
 
             {{ widgets('main_top') }}
 
@@ -37,7 +37,6 @@
     {% endblock aside %}
 
     {{ include('partials/_footer.twig') }}
-    {{ include('partials/_video_overlay.twig') }}
 
         <!-- must be above all other scipts -->
         <script src="https://unpkg.com/@popperjs/core@2"></script>

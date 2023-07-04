@@ -12,25 +12,12 @@
                       <nav>
                         <div class="mobile-menu" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
                         <div class="mobile-dropdown" id="mobile">
-                          <ul>
-                              <span class="line"></span>
-                              <li><a class="active" href="index.html">Home</a></li>
-                              <span class="line"></span>
-                              <li><a href="Man.html">Man</a></li>
-                              <span class="line"></span>
-                              <li><a href="">Philosophy</a></li>
-                              <span class="line"></span>
-                              <li><a href="">Issues</a></li>
-                              <span class="line"></span>
-                              <li><a href="">Applications</a></li>
-                              <span class="line"></span>
-                          </ul>
-
-                          <div class="taalkeuze">
-                              <a class="active" href="">EN</a>
-                              <p>|</p>
-                              <a href="">NL</a>
-                          </div>
+                            {{ menu(record.header, template = 'partials/_sub_menu.twig') }}
+                            <div class="taalkeuze">
+                                <a class="active" href="">EN</a>
+                                <p>|</p>
+                                <a href="">NL</a>
+                            </div>
                         </div>
                       </nav>
         </header>

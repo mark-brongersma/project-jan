@@ -11,45 +11,73 @@ homepage:
         title:
             type: text
             class: large
-            group: content
             localize: true
             label: Title
+        sub:
+            label: Sub
+            type: text
                 
         background_image:
             type: image
-            lable: Background image
+            label: Background image
 
         image_ayn:
             type: image
-            lable: Image Ayn
-        
-        buttons:
-            type: image
-            lable: Buttons
+            label: Image Ayn
+
+        who_is:
+            label: Who is
+            type: collection
+            limit: 3
+            fields:
+                button:
+                    label: Button
+                    type: set
+                    fields:
+                        button_text:
+                            label: Button text
+                            type: text
+                        colorvalue:
+                            label: alternative color
+                            type: select
+                            values: { 'blue': "blue" }
+                        link:
+                            label: Link
+                            type: text
 
         quote:
             type: text
             localize: true
 
-    
-        introduction:
+        conent1:
+            label: Content
             type: redactor
-            localize: true
 
-        content:
+        imagebox:
+            label: Image box
+            type: collection
+            fields:
+                image_en_text:
+                    label: image en text
+                    type: set
+                    fields:
+                        image:
+                            label: Image
+                            type: image
+                        head:
+                            label: Head
+                            type: text
+                        subtext:
+                            label: Sub text
+                            type: text
+                        link: 
+                            label: Link
+                            type: text
+        
+        conent2:
+            label: Content
             type: redactor
-            localize: true
-            
-        contentlink:
-            type: text
-            label: Link
-            placeholder: 'contentType/slug or https://example.org/'
-            postfix: "Use this to add a link for this Homepage. This could either be an 'internal' link like <tt>page//about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `https://example.org`."
-            fixture_format: '{url}'
-        slug:
-            type: slug
-            uses: title
-            group: Meta
+
     viewless: false
     taxonomy: [ categories, tags, foobars ]
     locales: ['en', 'nl', 'pt_BR', 'es']
@@ -72,27 +100,34 @@ pages:
     singular_name: Page
     fields:
         title:
+            label: Label
             type: text
             class: large
             group: content
-        teaser:
-            type: textarea
-            postfix: |
-                A text-only version of the content, that can be used to "tease"
-                the content when it's used in listing pages or search results.
-        image:
-            type: image
-            label: Highlighted image
-        body:
-            type: redactor
-            height: 300px
-        slug:
-            type: slug
-            uses: title
-            group: Meta
-        template:
-            type: templateselect
-            filter: '/^[^_].*\.twig$/'
+    
+        quote:
+            label: Quote
+            type: text
+            localize: true
+
+        list_items:
+            label: List items
+            type: collection
+            fields:
+                items:
+                    label: items
+                    type: set
+                    fields:
+                        list_text:
+                            label: Text
+                            type: text
+                        link:
+                            label: Video URL
+                            type: link
+                        tooltip:
+                            label: Tooltip
+                            type: redactor
+
     taxonomy: [ groups ]
     records_per_page: 5
     order: id

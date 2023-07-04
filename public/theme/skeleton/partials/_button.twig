@@ -1,0 +1,16 @@
+{% for feature in record.who_is %}
+        <a data-target="button_video" onclick="openNav(this), disableScroll()" class="button {{ feature.colorvalue }}">{{ feature.button_text }}</a>
+
+         {# https://docs.boltcms.io/5.0/fields/collection #}
+ <!-- #myNav {{ feature.button_text }} -->
+        <div id="button_video" class="overlay">
+                <div onclick="closeNav(this), enableScroll()" class="overlay-content">
+                         <div class="video-wrapper">
+                                <iframe width="1280" height="720px" allow="autoplay" src="{{ feature.link }}">
+                                </iframe>
+                        </div>
+                </div>
+        </div>
+ <!-- /#myNav {{ feature.button_text }} end -->
+{% endfor %}
+

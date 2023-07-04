@@ -2,22 +2,15 @@
 
 {% block main %}
 
-    <h1 class="title">{{ record|title }}</h1>
+    <blockquote>{{ record.quote }}</blockquote>
 
-    {% include 'partials/_image.twig' with ({'image': record|image}) %}
+    <div id="home-tekst" class="page-tekst">
+        <h3>{{ record|title }}</h3>
 
-    {# Output all fields, in the order as defined in the content type.
-       To change the generated html and configure the options, see:
-       https://docs.bolt.cm/templating #}
-    {% with { 'record': record, 'exclude': [record|image.fieldname|default()] } %}
-        {{ block('sub_fields', 'helpers/_fields.twig') }}
-    {% endwith %}
-
-    {# Uncomment this if you wish to dump the entire record to the client, for debugging purposes.
-    {{ dump(record) }}
-    #}
-
-
-    {% include 'partials/_recordfooter.twig' with { 'record': record, 'extended': true } %}
+        <ol class="list-tooltips">
+          {% include 'partials/_list_items.twig' with {'items': record.items} %}
+        </ol>
+    </div>
+    
 
 {% endblock main %}

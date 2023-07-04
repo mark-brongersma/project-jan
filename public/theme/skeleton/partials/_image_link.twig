@@ -1,0 +1,13 @@
+{% for feature in record.imagebox %}    
+            <figure>
+                <a href="{{ feature.link }}">
+                    <img src="{{ thumbnail(feature.image, 350, 350) }}" alt="{{ feature.image.alt|default() }}">
+                    <figcaption class="overlay-model">
+                        <a>{{ feature.head }}</a>
+                        <a>{{ feature.subtext }}</a>
+                    </figcaption>
+                </a>
+            </figure>         
+
+            {# VRAAG WAAROM HET NIET WERK STOP MET ER NAAR KIJKEN #}
+{% endfor %}

@@ -36,10 +36,12 @@
 
 {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
 <ul class="menu {{ class }}">
+<span class="line"></span>
 {% for item in menu %}
     {% if item.label is defined %}
         {{ display_menu_item(item, loop, withsubmenus) }}
     {% endif %}
+    <span class="line"></span>
 {% endfor %}
 </ul>
 

@@ -1,7 +1,7 @@
-function openNav() {
-  document.getElementById("myNav").style.visibility = "visible";
+function openNav(el) {
+  document.getElementById(el.dataset.target).style.visibility = "visible";
 }
 
-function closeNav() {
-  document.getElementById("myNav").style.visibility = "hidden";
+function closeNav(el) {
+  el.parentNode.style.visibility = "hidden";
 }
