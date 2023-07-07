@@ -10,7 +10,22 @@
         <ol class="list-tooltips">
           {% include 'partials/_list_items.twig' with {'items': record.items} %}
         </ol>
+        
     </div>
-    
+      {% setcontent about = 'page/list_items' %}    
+      {% set counter = 0 %}
+      {% for feature in record.list_items %}
+          {% set counter = counter + 1 %}  {# Update the counter within the loop #}
+          <!-- #video {{ feature.list_text }} -->
+          <div id="video{{ counter }}" class="overlay">
+              <div onclick="closeNav(this), enableScroll()" class="overlay-content">
+                  <div class="video-wrapper">
+                      <iframe width="1280" height="720px" allow="autoplay" src="{{ feature.link }}"></iframe>
+                  </div>
+              </div>
+          </div>
+          <!-- /#video {{ feature.list_text }} end -->
+      {% endfor %}
+
 
 {% endblock main %}

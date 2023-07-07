@@ -100,7 +100,7 @@ pages:
     singular_name: Page
     fields:
         title:
-            label: Label
+            label: Title
             type: text
             class: large
             group: content

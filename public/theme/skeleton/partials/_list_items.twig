@@ -1,32 +1,32 @@
+{% set counter = 0 %}
 {% for feature in record.list_items %}
+    {% set counter = counter + 1 %}  {# Update the counter within the loop #}
 
-        <li data-template="tippy_text" id="tooltip">
-                <div data-target="list-video" onclick="openNav(this), disableScroll()"></div>
-                        <a>{{ feature.list_text }}</a>
-                {# https://docs.boltcms.io/5.0/fields/collection #}
-        </li>
-
-                <!-- #tippy {{ feature.list_text }} --> 
-                <div class="tippy-content" style="display: none;">
-                        <div style="display: none;">
-                                <div id="tippy_text">
-                                        <a>{{ feature.tooltip }}</a>
-                                        <a data-target="list-video" onclick="openNav(this), disableScroll()">watch video</a>
-                                </div>
-                        </div>
+    <li data-template="{{ counter }}" id="tooltip">
+        
+        <div data-target="video{{ counter }}" onclick="openNav(this), disableScroll()">
+            <!-- #tippy {{ feature.list_text }} start -->
+            <div class="tippy-content" style="display: none;">
+                <div style="display: none;">
+                    <div id="{{ counter }}">
+                        <a>{{ feature.tooltip }}</a>
+                        <a data-target="video{{ counter }}" onclick="openNav(this), disableScroll()">watch video</a>
+                    </div>
                 </div>
-                <!-- #tippy {{ feature.list_text }} end --> 
+            </div>
+            <!-- #tippy {{ feature.list_text }} end -->
+        </div>
+        <a>{{ feature.list_text }}</a>
+        {# https://docs.boltcms.io/5.0/fields/collection #}
+    </li>
 
-                <!-- #video {{ feature.list_text }} -->
-                <div id="list-video" class="overlay">
-                        <div onclick="closeNav(this), enableScroll()" class="overlay-content">
-                                <div class="video-wrapper">
-                                        <iframe width="1280" height="720px" allow="autoplay" src="{{ feature.link }}">
-                                        </iframe>
-                                </div>
-                        </div>
-                </div>
-                <!-- /#video {{ feature.list_text }} end -->
-
-
+    {# <!-- #video {{ feature.list_text }} -->
+    <div id="video{{ counter }}" class="overlay">
+        <div onclick="closeNav(this), enableScroll()" class="overlay-content">
+            <div class="video-wrapper">
+                <iframe width="1280" height="720px" allow="autoplay" src="{{ feature.link }}"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- /#video {{ feature.list_text }} end --> #}
 {% endfor %}
