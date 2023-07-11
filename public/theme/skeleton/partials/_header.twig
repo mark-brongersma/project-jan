@@ -14,10 +14,11 @@
                         <div class="mobile-dropdown" id="mobile">
                             {{ menu(record.header, template = 'partials/_sub_menu.twig') }}
                             <div class="taalkeuze">
-                                <a class="active" href="">EN</a>
+                                <a class="{{ app.request.locale == 'en' ? 'active' }}" href="{{ path('homepage', { _locale: 'en' }) }}">EN</a>
                                 <p>|</p>
-                                <a href="">NL</a>
+                                <a class="{{ app.request.locale == 'nl' ? 'active' }}" href="{{ path('homepage', { _locale: 'nl' }) }}">NL</a>
                             </div>
+
                         </div>
                       </nav>
         </header>

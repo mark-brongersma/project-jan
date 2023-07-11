@@ -7,10 +7,10 @@ main:
   - label: Man
     link: /page/man
   - label: Philosophy
-    link: Philosophy
+    link: /page/philosophy
   - label: Issues
-    link: Issues
+    link: /page/issues
   - label: Applications
-    link: Applications
+    link: /page/applications
 
 foo: header
