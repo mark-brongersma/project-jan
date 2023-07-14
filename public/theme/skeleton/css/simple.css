@@ -84,7 +84,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   .background-image {
     position: absolute;
     z-index: -100;
-    top: -5%;
+    top: -150px;
     right: 0;
     pointer-events: none;
   }
@@ -295,6 +295,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
 
   .tippy-content a p {
     margin: 0;
+    font-size: 1.2rem;
   }
 
   .tippy-content a:last-child {
@@ -518,6 +519,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
 
   .page-tekst {
     line-height: var(--line-height);
+    max-width: 80ch;
   }
 
   @media only screen and (max-width: 800px) {

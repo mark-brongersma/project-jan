@@ -14,9 +14,9 @@
                         <div class="mobile-dropdown" id="mobile">
                             {{ menu(record.header, template = 'partials/_sub_menu.twig') }}
                             <div class="taalkeuze">
-                                <a class="{{ app.request.locale == 'en' ? 'active' }}" href="{{ path('homepage', { _locale: 'en' }) }}">EN</a>
+                                <a class="{{ app.request.locale == 'en' ? 'active' }}" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'en'})) }}">EN</a>
                                 <p>|</p>
-                                <a class="{{ app.request.locale == 'nl' ? 'active' }}" href="{{ path('homepage', { _locale: 'nl' }) }}">NL</a>
+                                <a class="{{ app.request.locale == 'nl' ? 'active' }}" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'nl'})) }}">NL</a>
                             </div>
 
                         </div>

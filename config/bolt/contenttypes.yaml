@@ -50,6 +50,7 @@ homepage:
         quote:
             type: text
             localize: true
+            display:
 
         conent1:
             label: Content
@@ -110,7 +111,6 @@ pages:
             label: Title
             type: text
             class: large
-            group: content
             localize: true
     
         quote:

@@ -1,6 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
+ {% include 'partials/_image_background.twig' with ({'background_image': record.background_image}) %}
     {% if record|default %}
     <!-- top page -->
         <div class="full-screen">
@@ -21,6 +22,7 @@
             <blockquote class="quote-menu">{{ record.quote }}</blockquote>
             <figure><a href="#home-tekst"><img src="files/homepage/2023/06/arrow-down.svg " alt="Scroll arrow down"/></a></figure>
         </div>
+        
 <!-- end top page -->
         <span id="home-tekst"></span>
         <div class="page-tekst">
@@ -35,7 +37,6 @@
             {{record.conent2}}
         </div>
 
-        {% include 'partials/_image_background.twig' with ({'background_image': record.background_image}) %}
     {% endif %}
 
 {% endblock main %}
