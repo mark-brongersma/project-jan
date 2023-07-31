@@ -38,18 +38,18 @@
 
     {{ include('partials/_footer.twig') }}
 
-        <!-- must be above all other scipts -->
+        <!-- must be above all other scripts -->
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
-        <!-- must be above all other scipts end -->
-    
-       
-        <script src="../theme/skeleton/js/Tippy.js"></script>
+        <!-- must be above all other scripts end -->
 
-        <script src="../theme/skeleton/js/disablescroll.js"></script>
-        <script src="../theme/skeleton/js/video-overlay.js"></script>
+        <script src="{{ asset('theme/skeleton/js/Tippy.js') }}"></script>
+
+        <script src="{{ asset('theme/skeleton/js/disablescroll.js') }}"></script>
+        <script src="{{ asset('theme/skeleton/js/video-overlay.js') }}"></script>
         <script src="https://kit.fontawesome.com/f00e0f6e3c.js" crossorigin="anonymous"></script>
-        <script src="../theme/skeleton/js/script.js"></script>
+        <script src="{{ asset('theme/skeleton/js/script.js') }}"></script>
+
     </body>
 
 </html>

@@ -1,16 +1,26 @@
 # This file defines the menus on the website. See the documentation for
 # details: https://docs.bolt.cm/menus
 
-main:
+en:
   - label: Home
-    link: homepage
+    link: /en/homepage
   - label: Man
-    link: /page/man
+    link: /en/page/man
   - label: Philosophy
-    link: /page/philosophy
+    link: /en/page/philosophy
   - label: Issues
-    link: /page/issues
+    link: /en/page/issues
   - label: Applications
-    link: /page/applications
+    link: /en/page/applications
 
-foo: header
+nl:
+  - label: Home
+    link: /nl/homepage
+  - label: Mens
+    link: /nl/page/man
+  - label: Filosofie
+    link: /nl/page/philosophy
+  - label: Kwesties
+    link: /nl/page/issues
+  - label: Toepassingen
+    link: /nl/page/applications

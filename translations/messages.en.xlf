@@ -7,5 +7,35 @@
         <target>general.phrase.none</target>
       </segment>
     </unit>
+    <unit id="OnhpU4i" name="Home">
+      <segment>
+        <source>Home</source>
+        <target>Home</target>
+      </segment>
+    </unit>
+    <unit id="IP4b0gH" name="Man">
+      <segment>
+        <source>Man</source>
+        <target>Man</target>
+      </segment>
+    </unit>
+    <unit id="fz2B6wg" name="Philosophy">
+      <segment>
+        <source>Philosophy</source>
+        <target>Philosophy</target>
+      </segment>
+    </unit>
+    <unit id="ZmBn3Td" name="Issues">
+      <segment>
+        <source>Issues</source>
+        <target>Issues</target>
+      </segment>
+    </unit>
+    <unit id="mOM7DzE" name="Applications">
+      <segment>
+        <source>Applications</source>
+        <target>Applications</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
