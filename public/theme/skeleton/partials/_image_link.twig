@@ -1,11 +1,11 @@
 {% for feature in record.imagebox %}    
-            <figure>
-                <a class="imagelink_link" href="{{ feature.link }}">
-                    <img src="{{ thumbnail(feature.image, 350, 350) }}" alt="{{ feature.image.alt|default() }}">
-                    <figcaption class="overlay-model">
-                        <a>{{ feature.head }}</a>
-                        <a>{{ feature.subtext }}</a>
-                    </figcaption>
-                </a>
-            </figure>         
+    <figure>
+        <a class="imagelink_link" href="{{ feature.link }}">
+            <img src="{{ thumbnail(feature.image, 350, 350) }}" alt="{{ feature.image.alt|default() }}"/>
+            <figcaption class="overlay-model">
+                <p>{{ feature.head }}</p>
+                <p>{{ feature.subtext }}</p>
+            </figcaption>
+        </a>
+    </figure>         
 {% endfor %}
