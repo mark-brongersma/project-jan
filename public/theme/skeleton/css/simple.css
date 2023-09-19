@@ -59,6 +59,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     /* colors */
     --primary: #A6CBBC;
     --blue: #697381;
+    --darkerblue: #294b5c;
     --yellow: #E2BF4C;
     --orangish:#BF6F3D;
     --red:#BB2E38;
@@ -72,6 +73,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
 
   * {
     scroll-behavior: smooth;
+    
   }
 
   .container {
@@ -131,6 +133,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     font-family: var(--titleFont);
     font-size: var(--big);
     line-height: var(--line-height);
+    color: var(--darkerblue);
     margin: 0;
     place-self: flex-start;
   }
@@ -151,7 +154,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   header {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100w;
     height: 5rem;
     align-items: center;
     justify-content: space-between;
@@ -228,7 +231,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
 
   .active {
     text-decoration: underline .5rem solid var(--white);
-    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-line: underline ;
     -webkit-text-decoration-thickness: .5rem;
     -webkit-text-decoration-color: var(--white); 
   }
@@ -353,22 +356,20 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     height: 100%;
     display: flex;
     justify-content: center;
+    position: sticky;
   }
 
-  .video-wrapper {
+    .video-wrapper {
     width: fit-content;
     height: fit-content;
     position: sticky;
     position: -webkit-sticky;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } 
-  /* almost */
+    top: 18vh;
+} 
   
 
   .video-wrapper iframe {
-    height: 50vw;
+    height: 50vh;
     width: 90vw;
     z-index: 2000;
   }
@@ -495,7 +496,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   .home-image > img {
     height: auto;
     max-width: 250px;
-    object-fit: scale-down;
+    
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -661,8 +662,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
   }
 
   .footer-wrapper > a > svg {
-    padding: 1rem;
-    margin-inline-end: 1rem;
+    padding: 1rem;  
     scale: 50%;
   }
 
@@ -735,9 +735,8 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     }
 
     .home-image > img {
-      width: auto;
-      max-height: 250px;
-      object-fit: scale-down;
+      width: 250px;
+      height: 250px;
     }
 
     main {
@@ -762,6 +761,7 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-
     .footer-wrapper {
       margin: 0 10rem;
     }
+
     .footer-wrapper > a > svg {
       scale: 100%;
     }
