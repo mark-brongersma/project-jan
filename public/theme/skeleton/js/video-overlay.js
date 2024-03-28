@@ -4,4 +4,6 @@ function openNav(el) {
 
 function closeNav(el) {
   el.parentNode.style.visibility = "hidden";
+  let iframe = el.querySelector('iframe');
+  iframe.src = iframe.src;
 }

@@ -19,14 +19,4 @@
         <a>{{ feature.list_text }}</a>
         {# https://docs.boltcms.io/5.0/fields/collection #}
     </li>
-
-    {# <!-- #video {{ feature.list_text }} -->
-    <div id="video{{ counter }}" class="overlay">
-        <div onclick="closeNav(this), enableScroll()" class="overlay-content">
-            <div class="video-wrapper">
-                <iframe width="1280" height="720px" allow="autoplay" src="{{ feature.link }}"></iframe>
-            </div>
-        </div>
-    </div>
-    <!-- /#video {{ feature.list_text }} end --> #}
 {% endfor %}

@@ -132,7 +132,7 @@ pages:
                             type: text
                             localize: true
                         link:
-                            label: Video URL
+                            label: Embedded youtube link
                             type: link
                         tooltip:
                             label: Tooltip
